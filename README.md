@@ -1,4 +1,5 @@
 [![wakatime](https://wakatime.com/badge/github/dieguesmosken/servidor_bedrock.svg?style=flat-square)](https://wakatime.com/badge/github/dieguesmosken/servidor_bedrock)
+[![Python application](https://github.com/dieguesmosken/servidor_bedrock/actions/workflows/python-app.yml/badge.svg)](https://github.com/dieguesmosken/servidor_bedrock/actions/workflows/python-app.yml)
 # Script de Redirecionamento de Portas para Servidor Minecraft Bedrock
 
 Este é um script em Python que permite redirecionar portas para um servidor Minecraft Bedrock em execução no seu computador. Ele recebe as conexões dos clientes e as redireciona para o servidor Minecraft Bedrock, permitindo que jogadores externos se conectem ao seu servidor.
