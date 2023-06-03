@@ -44,3 +44,86 @@ Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests c
 
 Este projeto está licenciado sob a licença [MIT](LICENSE).
 
+## Créditos
+
+- [@Dieguesmosken](https://dieguesmosken.github.io/) (Autor)
+- [@Dieguesmosken](https://dieguesmosken.github.io/) (Desenvolvedor)
+---
+# Port Redirection Script for Minecraft Bedrock Server
+
+## Links
+
+- [Repositório no GitHub](https://github.com/dieguesmosken/servidor_bedrock)
+- [Página do Projeto](https://dieguesmosken.github.io/servidor_bedrock/)
+- [Página do Autor](https://dieguesmosken.github.io/)
+- [Licença](LICENSE)
+
+## Sumário
+
+## Changelog
+
+### [1.0.0] - 2023-05-01
+
+#### Added
+
+- Initial release.
+
+#### Changed
+
+- Nothing.
+
+#### Removed
+
+- Nothing.
+
+## To Do
+
+- [ ] Nothing.
+
+## Done ✓
+
+- [x] script de redirecionamento de portas
+- [x] script de backup dos arquivos do servidor
+
+
+## References
+
+- [Python](https://www.python.org/)
+- [Python - Socket](https://docs.python.org/3/library/socket.html)
+- [GitHub](https://github.com)
+- [GitHub - Actions](https://docs.github.com/en/actions)
+- [GitHub - Actions - Python Application](https://docs.github.com/en/actions/language-and-framework-guides/building-and-testing-python#building-and-testing-python-with-pytest)
+- [Python](https://www.python.org/)
+- [Python - Socket](https://docs.python.org/3/library/socket.html)
+- [Python - Socket - TCP](https://docs.python.org/3/library/socket.html#socket.socket)
+- [Python - Socket - UDP](https://docs.python.org/3/library/socket.html#socket.socket)
+
+## Tags
+
+## Keywords
+
+## See Also
+
+## Further Reading
+
+## External Links
+
+## Meta
+
+## Support
+
+Reach out to me at one of the following places!
+
+- Website at <a href="https://dieguesmosken.github.io/" target="_blank">`dieguesmosken.github.io`</a>
+- Email at <a href="mailto:matheus.diegues@outlook.com" target="_blank">`matheus.diegues@outllok.com`</a>
+- LinkedIn at <a href="https://www.linkedin.com/in/dieguesmosken" target="_blank">`dieguesmosken`</a>
+- Twitter at <a href="https://twitter.com/dieguesmosken" target="_blank">`@dieguesmosken`</a>
+- Facebook at <a href="https://www.facebook.com/dieguesmosken" target="_blank">`@dieguesmosken`</a>
+- Instagram at <a href="https://www.instagram.com/dieguesmosken" target="_blank">`@dieguesmosken`</a>
+- Pinterest at <a href="https://www.pinterest.com/dieguesmosken" target="_blank">`@dieguesmosken`</a>
+- YouTube at <a href="https://www.youtube.com/TeuzinYTBR" target="_blank">`TeuzinYTBR`</a>
+- TikTok at <a href="https://www.tiktok.com/@dieguesmosken" target="_blank">`@dieguesmosken`</a>
+- Twitch at <a href="https://www.twitch.tv/dieguesmosken" target="_blank">`@dieguesmosken`</a>
+
+- CodePen at <a href="https://codepen.io/dieguesmosken" target="_blank">`@dieguesmosken`</a>
+- Dev.to at <a href="https://dev.to/dieguesmosken" target="_blank">`@dieguesmosken`</a>
