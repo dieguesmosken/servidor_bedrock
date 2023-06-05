@@ -1,0 +1,52 @@
+# Ignorar arquivos de compilação
+*.exe
+*.dll
+*.pdb
+
+# Ignorar arquivos gerados por IDEs
+.vscode/
+.idea/
+
+# Ignorar arquivos de configuração do servidor
+server.properties
+bukkit.yml
+spigot.yml
+paper.yml
+
+# Ignorar backups de mundo
+world_backup/
+
+# Ignorar logs do servidor
+logs/
+
+# Ignorar cache de plugins
+plugins/cache/
+
+# Ignorar arquivos temporários
+*.tmp
+
+# Ignorar arquivos de dados
+data/
+
+# Ignorar arquivos de backup
+*.bak
+*.bak.*
+*.old
+
+# Ignorar arquivos de logs
+*.log
+
+# Ignorar arquivos de cache
+cache/
+
+# Ignorar diretórios de construção
+build/
+dist/
+
+# Ignorar arquivos de dependências
+node_modules/
+vendor/
+
+# Ignorar arquivos específicos
+arquivo1.txt
+arquivo2.png
