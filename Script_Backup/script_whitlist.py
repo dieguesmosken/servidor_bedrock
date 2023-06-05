@@ -1,6 +1,6 @@
 import socket
 import threading
-
+print("Script para whitelist de jogadores no servidor Minecraft Bedrock Edition.")
 # Lista de jogadores permitidos (whitelist)
 whitelist = ['player1', 'player2', 'player3']
 

@@ -4,15 +4,15 @@ import urllib.request
 import zipfile
 import re
 from bs4 import BeautifulSoup
-
+print("Script de backup do servidor Minecraft Bedrock iniciado...")
 # URL do site oficial do Minecraft para download do servidor Bedrock
 url = "https://www.minecraft.net/en-us/download/server/bedrock"
-
+print("URL do site oficial do Minecraft para download do servidor Bedrock:", url)
 # Diretório do seu servidor Minecraft Bedrock
-server_directory = "content/servidor-atual"
+server_directory = "BDS-Server"
 
 # Diretório de backup para salvar os arquivos
-backup_directory = "content/servidor-backup"
+backup_directory = "BDS-Server\servidor-backup"
 
 # Arquivos e diretórios a serem preservados
 preserve_files = ["whitelist.json", "server.properties", "permissions.json"]
@@ -43,8 +43,9 @@ def obter_versao_mais_recente():
     resultado = re.search(padrao, link_download)
 
     if resultado:
+        print("Versão mais recente do servidor Bedrock:", resultado.group(1))
         return resultado.group(1)
-
+        
     return None
 
 # Função para atualizar o servidor Bedrock
@@ -58,8 +59,9 @@ def atualizar_servidor():
 
     if versao_mais_recente:
         # Construir a URL de download com base na versão mais recente
+        print("Construindo a URL de download com base na versão mais recente...")
         download_url = "https://minecraft.azureedge.net/bin-win/bedrock-server-" + versao_mais_recente + ".zip"
-
+        print("URL de download da versão mais recente do servidor Bedrock:", download_url)
         # Realizar backup dos arquivos e diretórios
         fazer_backup_arquivos()
 

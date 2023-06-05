@@ -3,8 +3,7 @@ from tkinter import messagebox
 
 def carregar_configuracoes():
     try:
-        # Abre o arquivo server.properties em modo de leitura
-        with open('server.properties', 'r') as file:
+        with open('BDS-Server/server.properties', 'r') as file:
             configuracoes = {}
             for line in file:
                 if '=' in line:
@@ -16,19 +15,19 @@ def carregar_configuracoes():
         messagebox.showerror('Erro', f'Ocorreu um erro ao carregar as configurações: {str(e)}')
         return {}
 
-def salvar_configuracoes():
+def salvar_configuracoes(configuracoes):
     try:
-        configuracoes = {
-            'motd': motd_entry.get(),
-            'gamemode': gamemode_entry.get(),
-            'max-players': max_players_entry.get(),
-            'spawn-protection': spawn_protection_entry.get(),
-            # Adicione outras configurações aqui
-        }
+        with open('BDS-Server/server.properties', 'r') as file:
+            linhas_originais = file.readlines()
 
-        with open('server.properties', 'w') as file:
-            for key, value in configuracoes.items():
-                file.write(f'{key}={value}\n')
+        with open('BDS-Server/server.properties', 'w') as file:
+            for linha in linhas_originais:
+                if '=' in linha:
+                    key = linha.split('=')[0].strip()
+                    if key in configuracoes:
+                        value = configuracoes[key]
+                        linha = f'{key}={value}\n'
+                file.write(linha)
 
         messagebox.showinfo('Sucesso', 'As configurações foram salvas com sucesso.')
     except Exception as e:
@@ -39,20 +38,47 @@ def criar_interface():
     window.title('Editor de server.properties')
 
     configuracoes = carregar_configuracoes()
+    num_propriedades = len(configuracoes)
 
-    # Cria os rótulos e campos de entrada
-    for key, value in configuracoes.items():
-        label = tk.Label(window, text=f'{key}:')
-        label.pack()
-        entry = tk.Entry(window)
+    largura_janela = 700
+    altura_janela = min(num_propriedades * 30 + 100, 500)
+    window.geometry(f'{largura_janela}x{altura_janela}')
+
+    entries = {}
+    coluna_atual = 0
+
+    def atualizar_valor(event, key):
+        configuracoes[key] = entries[key].get()
+
+    def salvar_configuracoes_e_fechar():
+        salvar_configuracoes(configuracoes)
+        window.destroy()
+
+    barra_botoes = tk.Frame(window)
+    barra_botoes.pack(side='top')
+
+    salvar_button = tk.Button(barra_botoes, text='Salvar', command=salvar_configuracoes_e_fechar)
+    salvar_button.pack(side='left')
+
+    sair_button = tk.Button(barra_botoes, text='Sair', command=window.quit)
+    sair_button.pack(side='left')
+
+    frame_propriedades = tk.Frame(window)
+    frame_propriedades.pack(side='top')
+
+    for i, (key, value) in enumerate(configuracoes.items()):
+        propriedade_frame = tk.Frame(frame_propriedades)
+        propriedade_frame.pack(side='top')
+
+        label = tk.Label(propriedade_frame, text=key)
+        label.pack(side='left', padx=5, pady=5)
+
+        entry = tk.Entry(propriedade_frame)
         entry.insert(0, value)
-        entry.pack()
+        entry.pack(side='left', padx=5, pady=5)
 
-        configuracoes[key] = entry
-
-    # Botão para salvar as configurações
-    salvar_button = tk.Button(window, text='Salvar', command=salvar_configuracoes)
-    salvar_button.pack()
+        entry.bind('<Return>', lambda event, key=key: atualizar_valor(event, key))
+        entries[key] = entry
 
     window.mainloop()
 
