@@ -45,7 +45,7 @@ def obter_versao_mais_recente():
     if resultado:
         print("Versão mais recente do servidor Bedrock:", resultado.group(1))
         return resultado.group(1)
-        
+
     return None
 
 # Função para atualizar o servidor Bedrock
