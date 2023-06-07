@@ -39,7 +39,7 @@ while True:
 
         # Criação do mundo
         world.create_world("nome_do_mundo")
-        
+
         client_thread = ClientThread(client_socket)
         client_thread.start()
     else:
