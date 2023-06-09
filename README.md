@@ -1,4 +1,4 @@
-[![wakatime](https://wakatime.com/badge/github/dieguesmosken/servidor_bedrock.svg?style=flat-square)](https://wakatime.com/badge/github/dieguesmosken/servidor_bedrock)
+[![wakatime](https://wakatime.com/badge/github/dieguesmosken/servidor_bedrock.svg)](https://wakatime.com/badge/github/dieguesmosken/servidor_bedrock)
 [![Python application](https://github.com/dieguesmosken/servidor_bedrock/actions/workflows/python-app.yml/badge.svg)](https://github.com/dieguesmosken/servidor_bedrock/actions/workflows/python-app.yml)
 # Script de Redirecionamento de Portas para Servidor Minecraft Bedrock
 
