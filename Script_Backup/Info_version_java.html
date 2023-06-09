@@ -54,11 +54,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: all 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
         }
 
         .go-to-end-button:hover {
             background-color: #0056b3;
+        }
+
+        .go-to-end-button.clicked {
             transform: rotate(180deg);
         }
 
@@ -71,7 +74,7 @@
     <h1>Informações versões Minecraft Java</h1>
     <div id="versions-list"></div>
 
-    <button class="go-to-end-button" onclick="goToStart()"><i class="fas fa-arrow-down"></i></button>
+    <button class="go-to-end-button" onclick="toggleAnimation()"><i class="fas fa-arrow-down"></i></button>
 
     <script>
         // Função para buscar os dados do JSON
@@ -117,20 +120,26 @@
             });
         }
 
+        // Função para alternar a animação do botão
+        function toggleAnimation() {
+            var goToButton = document.querySelector('.go-to-end-button');
+            goToButton.classList.toggle('clicked');
+
+            if (goToButton.classList.contains('clicked')) {
+                goToEnd();
+            } else {
+                goToStart();
+            }
+        }
+
         // Função para ir para o início da página
         function goToStart() {
             window.scrollTo(0, 0);
-            var goToStartButton = document.querySelector('.go-to-end-button');
-            goToStartButton.innerHTML = '<i class="fas fa-arrow-down"></i>';
-            goToStartButton.onclick = goToEnd;
         }
 
         // Função para ir para o final da página
         function goToEnd() {
             window.scrollTo(0, document.body.scrollHeight);
-            var goToEndButton = document.querySelector('.go-to-end-button');
-            goToEndButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
-            goToEndButton.onclick = goToStart;
         }
 
         // Chamar a função fetchJSON para buscar e exibir os dados
