@@ -36,11 +36,21 @@
             color: #007bff;
             text-decoration: none;
         }
+
+        .go-to-end-button {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <h1>Informações versões Minecraft Java</h1>
     <div id="versions-list"></div>
+    
+    <div class="go-to-end-button">
+        <button onclick="goToEnd()">Ir para o final</button>
+    </div>
 
     <script>
         // Função para buscar os dados do JSON
@@ -84,6 +94,11 @@
 
                 versionsList.appendChild(versionContainer);
             });
+        }
+
+        // Função para ir para o final da página
+        function goToEnd() {
+            window.scrollTo(0, document.body.scrollHeight);
         }
 
         // Chamar a função fetchJSON para buscar e exibir os dados
