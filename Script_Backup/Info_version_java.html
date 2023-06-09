@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exibir versões</title>
+    <style>
+        /* Estilos CSS para formatar a exibição */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .version-container {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .version-container strong {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Informações versões minecraft java</h1>
+    <div id="versions-list"></div>
+
+    <script>
+        // Função para buscar os dados do JSON
+        function fetchJSON() {
+            var url = 'https://launchermeta.mojang.com/mc/game/version_manifest.json';
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => displayVersions(data.versions))
+                .catch(error => console.log(error));
+        }
+
+        // Função para exibir as versões formatadas na página
+        function displayVersions(versions) {
+            var versionsList = document.getElementById('versions-list');
+
+            versions.forEach(version => {
+                var versionContainer = document.createElement('div');
+                versionContainer.classList.add('version-container');
+
+                var versionId = document.createElement('strong');
+                versionId.textContent = 'Version_ID: ' + version.id;
+                versionContainer.appendChild(versionId);
+
+                var versionType = document.createElement('strong');
+                versionType.textContent = 'Tipo: ' + version.type;
+                versionContainer.appendChild(versionType);
+
+                var versionUrl = document.createElement('a');
+                versionUrl.href = version.url;
+                versionUrl.textContent = 'URL: ' + version.url;
+                versionContainer.appendChild(versionUrl);
+
+                var versionTime = document.createElement('strong');
+                versionTime.textContent = 'Data de Atualização: ' + version.time;
+                versionContainer.appendChild(versionTime);
+
+                var versionReleaseTime = document.createElement('strong');
+                versionReleaseTime.textContent = 'Data de lançamento: ' + version.releaseTime;
+                versionContainer.appendChild(versionReleaseTime);
+
+                versionsList.appendChild(versionContainer);
+            });
+        }
+
+        // Chamar a função fetchJSON para buscar e exibir os dados
+        fetchJSON();
+    </script>
+</body>
+</html>

@@ -2,17 +2,26 @@ import os
 import shutil
 import urllib.request
 import zipfile
-import re
-from bs4 import BeautifulSoup
-print("Script de backup do servidor Minecraft Bedrock iniciado...")
-# URL do site oficial do Minecraft para download do servidor Bedrock
-url = "https://www.minecraft.net/en-us/download/server/bedrock"
-print("URL do site oficial do Minecraft para download do servidor Bedrock:", url)
+
+# Verificar e instalar as dependências se necessário
+try:
+    import bs4
+except ImportError:
+    os.system('pip install beautifulsoup4')
+
+try:
+    import requests
+except ImportError:
+    os.system('pip install requests')
+
+# URL base para download do servidor Bedrock
+base_url = "https://minecraft.azureedge.net/bin-win/bedrock-server-"
+
 # Diretório do seu servidor Minecraft Bedrock
-server_directory = "BDS-Server"
+server_directory = "BDS-Server/bedrock-server-1.19.83.01/"
 
 # Diretório de backup para salvar os arquivos
-backup_directory = "BDS-Server\servidor-backup"
+backup_directory = "BDS-Server/backup-bedrock-server/"
 
 # Arquivos e diretórios a serem preservados
 preserve_files = ["whitelist.json", "server.properties", "permissions.json"]
@@ -32,20 +41,20 @@ def fazer_backup_arquivos():
 
 # Função para obter a versão mais recente do servidor Bedrock
 def obter_versao_mais_recente():
-    response = urllib.request.urlopen(url)
+    response = urllib.request.urlopen(base_url)
+
     html = response.read().decode("utf-8")
-
-    soup = BeautifulSoup(html, "html.parser")
-    link_download = soup.find("a", href=re.compile(r"bedrock-server-\d+\.\d+\.\d+\.\d+\.zip"))["href"]
-
-    # Extrair a versão do link de download
-    padrao = r"bedrock-server-(\d+\.\d+\.\d+\.\d+)\.zip"
-    resultado = re.search(padrao, link_download)
-
-    if resultado:
-        print("Versão mais recente do servidor Bedrock:", resultado.group(1))
-        return resultado.group(1)
+    print("Obtendo a versão mais recente do servidor Bedrock...")
+    # Procurar pelo link de download da versão mais recente
+    inicio_link = html.find(base_url)
+    if inicio_link != -1:
+        inicio_link += len(base_url)
+        fim_link = html.find(".zip", inicio_link)
         
+        if fim_link != -1:
+            print("Versão mais recente encontrada: " + html[inicio_link:fim_link])
+            return html[inicio_link:fim_link]
+    print("Não foi possível encontrar a versão mais recente do servidor Bedrock")
     return None
 
 # Função para atualizar o servidor Bedrock
@@ -53,29 +62,31 @@ def atualizar_servidor():
     # Verificar se o diretório de backup existe, caso contrário, criá-lo
     if not os.path.exists(backup_directory):
         os.makedirs(backup_directory)
+        print("O diretório de backup foi criado com sucesso!")
 
     # Obter a versão mais recente do servidor Bedrock
     versao_mais_recente = obter_versao_mais_recente()
 
     if versao_mais_recente:
         # Construir a URL de download com base na versão mais recente
-        print("Construindo a URL de download com base na versão mais recente...")
-        download_url = "https://minecraft.azureedge.net/bin-win/bedrock-server-" + versao_mais_recente + ".zip"
-        print("URL de download da versão mais recente do servidor Bedrock:", download_url)
+        download_url = base_url + versao_mais_recente + ".zip"
+        print("Baixando a versão mais recente do servidor Bedrock: " + download_url)
         # Realizar backup dos arquivos e diretórios
         fazer_backup_arquivos()
 
         # Baixar o arquivo zip da versão mais recente
         urllib.request.urlretrieve(download_url, "bedrock_server.zip")
-
+        print("O servidor foi baixado com sucesso!")
         # Extrair o arquivo zip na pasta do servidor
         with zipfile.ZipFile("bedrock_server.zip", "r") as zip_ref:
             zip_ref.extractall(server_directory)
-
+            print("O servidor foi extraído com sucesso!")
         # Remover o arquivo zip baixado
         os.remove("bedrock_server.zip")
-
+        print("O arquivo zip foi removido com sucesso!")
         print("O servidor foi atualizado com sucesso!")
     else:
         print("Não foi possível obter a versão mais recente do servidor Bedrock.")
 
+# Chamar a função de atualização
+atualizar_servidor()

@@ -6,10 +6,10 @@ import time
 import hashlib
 
 # Caminho para a pasta do servidor Minecraft
-minecraft_path = '/caminho/para/pasta/do/servidor/minecraft'
+minecraft_path = 'BDS-Server/bedrock-server-1.20.0.01/'
 
 # Caminho para a pasta de backup
-backup_path = '/caminho/para/pasta/de/backup'
+backup_path = 'BDS-Server/backups-bedrock-server'
 
 def calcular_hash(file_path):
     # Cria um objeto hash MD5
