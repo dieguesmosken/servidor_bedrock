@@ -1,9 +1,11 @@
 [![wakatime](https://wakatime.com/badge/github/dieguesmosken/servidor_bedrock.svg)](https://wakatime.com/badge/github/dieguesmosken/servidor_bedrock)
 [![Python application](https://github.com/dieguesmosken/servidor_bedrock/actions/workflows/python-app.yml/badge.svg)](https://github.com/dieguesmosken/servidor_bedrock/actions/workflows/python-app.yml)
-# Servidor Para Minecraft Bedrock escrito em Python
+# Servidor Para Minecraft Bedrock escrito em Python 
+
 
 Este é um servidor de minecraft bedrock edition escrito em Python que permite gerenciar e criar portas para executar um servidor Minecraft Bedrock no seu computador. {missing-text}.
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ## Pré-requisitos
 
 - Python 3 instalado no seu computador.
@@ -34,7 +36,7 @@ Certifique-se de redirecionar a porta do servidor Minecraft Bedrock (por padrão
 
 ## Limitações
 
-- atualmente não esta funcional , este script esta em fase de construção e está aberto a novos colaboradores
+- Atualmente não esta funcional , este script esta em fase de construção e está aberto a novos colaboradores
 - Este script foi fornecido como uma solução de exemplo e pode não funcionar em todos os ambientes ou configurações específicas. Certifique-se de adaptá-lo às suas necessidades e realizar testes adequados.
 
 ## Contribuindo
