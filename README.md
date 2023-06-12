@@ -6,6 +6,9 @@
 Este é um servidor de minecraft bedrock edition escrito em Python que permite gerenciar e criar portas para executar um servidor Minecraft Bedrock no seu computador. {missing-text}.
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Windows 11](https://img.shields.io/badge/Windows%2011-%230079d5.svg?style=for-the-badge&logo=Windows%2011&logoColor=white)
+<!--![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) -->
 ## Pré-requisitos
 
 - Python 3 instalado no seu computador.
