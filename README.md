@@ -61,7 +61,7 @@ Este projeto está licenciado sob a licença [MIT](LICENSE).
 
 ## Sumário
 
-## - [Changelog](CHANGELOG.MD)
+## - [Changelog](CHANGELOG.md)
 
 ### [0.0.1] - 2023-05-01
 ### [0.0.2] - 2023-06-12
