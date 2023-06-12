@@ -54,7 +54,7 @@ Este projeto está licenciado sob a licença [MIT](LICENSE).
 
 ## Links
 
-- [Repositório no GitHub](https://github.com/dieguesmosken/servidor_bedrock)
+- [Repositório no GitHub](https://github.com/dieguesmosken/servidor_bedrock/tree/main-server-bedrock)
 - [Página do Projeto](https://dieguesmosken.github.io/servidor_bedrock/)
 - [Página do Autor](https://dieguesmosken.github.io/)
 - [Licença](LICENSE)
