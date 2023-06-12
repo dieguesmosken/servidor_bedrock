@@ -15,10 +15,10 @@
 
 ## To Do
 
-- [] Criar estutura basica inicial.
-- [] Criar estruturas do servidor.
-- [] Criar a classe main.py do servidor.
-- [] Criar outras classes correspondentes
+- [ ] Criar estutura basica inicial.
+- [ ] Criar estruturas do servidor.
+- [ ] Criar a classe main.py do servidor.
+- [ ] Criar outras classes correspondentes
 
 ## Done ✓
 
@@ -47,9 +47,9 @@
 
 ## To Do
 
-- [] Criar estruturas do servidor.
-- [] Criar a classe main.py do servidor.
-- [] Criar outras classes correspondentes
+- [ ] Criar estruturas do servidor.
+- [ ] Criar a classe main.py do servidor.
+- [ ] Criar outras classes correspondentes
 
 ## Done ✓
 
