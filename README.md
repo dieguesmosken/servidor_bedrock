@@ -64,30 +64,7 @@ Este projeto está licenciado sob a licença [MIT](LICENSE).
 ## - [Changelog](CHANGELOG.MD)
 
 ### [0.0.1] - 2023-05-01
-
-#### Added
-
-- Initial release.
-
-#### Changed
-
-- criado script de redirecionanmento de portas.
-
-#### Removed
-
-- Nothing.
-
-## To Do
-
-- [] Criar estruturas do servidor.
-- [] Criar a classe main.py do servidor.
-- [] Criar outras classes correspondentes
-
-## Done ✓
-
-- [x] script de redirecionamento de portas
-- [x] script de backup dos arquivos do servidor
-
+### [0.0.2] - 2023-06-12
 
 ## References
 
