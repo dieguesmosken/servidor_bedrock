@@ -1,9 +1,14 @@
 [![wakatime](https://wakatime.com/badge/github/dieguesmosken/servidor_bedrock.svg)](https://wakatime.com/badge/github/dieguesmosken/servidor_bedrock)
 [![Python application](https://github.com/dieguesmosken/servidor_bedrock/actions/workflows/python-app.yml/badge.svg)](https://github.com/dieguesmosken/servidor_bedrock/actions/workflows/python-app.yml)
-# Script de Redirecionamento de Portas para Servidor Minecraft Bedrock
+# Servidor Para Minecraft Bedrock escrito em Python 
 
-Este é um script em Python que permite redirecionar portas para um servidor Minecraft Bedrock em execução no seu computador. Ele recebe as conexões dos clientes e as redireciona para o servidor Minecraft Bedrock, permitindo que jogadores externos se conectem ao seu servidor.
 
+Este é um servidor de minecraft bedrock edition escrito em Python que permite gerenciar e criar portas para executar um servidor Minecraft Bedrock no seu computador. {missing-text}.
+
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Windows 11](https://img.shields.io/badge/Windows%2011-%230079d5.svg?style=for-the-badge&logo=Windows%2011&logoColor=white)
+<!--![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) -->
 ## Pré-requisitos
 
 - Python 3 instalado no seu computador.
@@ -15,16 +20,16 @@ Este é um script em Python que permite redirecionar portas para um servidor Min
 
 2. Instale as bibliotecas necessárias usando o comando `pip install -r requirements.txt`.
 
-3. Abra o arquivo `server_redirection.py` em um editor de texto.
+3. (opcional) Abra o arquivo `server_redirection.py` em um editor de texto.
 
-4. Na seção de configurações, atualize as seguintes variáveis de acordo com suas necessidades:
+Na seção de configurações, atualize as seguintes variáveis de acordo com suas necessidades:
 
    - `MINECRAFT_SERVER_IP`: O endereço IP do seu servidor Minecraft Bedrock.
-   - `MINECRAFT_SERVER_PORT`: A porta do seu servidor Minecraft Bedrock.
+   - `MINECRAFT_SERVER_PORT`: A porta para o seu servidor Minecraft Bedrock.
 
-5. Execute o script usando o comando `python server_redirection.py`.
+5. Execute o script usando o comando `python main.py`.
 
-6. O servidor de redirecionamento será iniciado e estará pronto para receber conexões dos jogadores.
+6. O servidor bedrock será iniciado e estará pronto para receber conexões dos jogadores.
 
 ## Configurando o Redirecionamento de Portas no Roteador
 
@@ -34,6 +39,7 @@ Certifique-se de redirecionar a porta do servidor Minecraft Bedrock (por padrão
 
 ## Limitações
 
+- Atualmente não esta funcional , este script esta em fase de construção e está aberto a novos colaboradores
 - Este script foi fornecido como uma solução de exemplo e pode não funcionar em todos os ambientes ou configurações específicas. Certifique-se de adaptá-lo às suas necessidades e realizar testes adequados.
 
 ## Contribuindo
@@ -53,38 +59,17 @@ Este projeto está licenciado sob a licença [MIT](LICENSE).
 
 ## Links
 
-- [Repositório no GitHub](https://github.com/dieguesmosken/servidor_bedrock)
+- [Repositório no GitHub](https://github.com/dieguesmosken/servidor_bedrock/tree/main-server-bedrock)
 - [Página do Projeto](https://dieguesmosken.github.io/servidor_bedrock/)
 - [Página do Autor](https://dieguesmosken.github.io/)
 - [Licença](LICENSE)
 
 ## Sumário
 
-## Changelog
+## - [Changelog](CHANGELOG.md)
 
-### [1.0.0] - 2023-05-01
-
-#### Added
-
-- Initial release.
-
-#### Changed
-
-- Nothing.
-
-#### Removed
-
-- Nothing.
-
-## To Do
-
-- [ ] Nothing.
-
-## Done ✓
-
-- [x] script de redirecionamento de portas
-- [x] script de backup dos arquivos do servidor
-
+### [0.0.1] - 2023-05-01
+### [0.0.2] - 2023-06-12
 
 ## References
 
